@@ -1,6 +1,6 @@
 const JWT=require("jsonwebtoken");
 
-const secret="kar98@142";
+const secret="JWT_SECRET";
 
 function createTokenForuser(user){
     const payload={

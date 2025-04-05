@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express=require("express");
 const path=require("path");
 const ConnectTOMongoDb=require("mongoose");
@@ -8,7 +10,7 @@ const urlRoute=require("./routes/url")
 const {CheckAuthenticationforuser,requireAuth}=require("./middlewares/authentication");
 
 const app=express();
-const port=8000;
+const PORT=process.env.PORT ||8000;
 
 app.set("view engine","ejs");
 app.set("views",path.resolve("views"));
@@ -34,6 +36,6 @@ app.get("/",(req,res)=>{
     });
 });
 
-ConnectTOMongoDb.connect("mongodb://127.0.0.1:27017/ulss").then(()=>console.log(`MongoDb Started`));
+ConnectTOMongoDb.connect(process.env.MONGO_URL).then(()=>console.log(`MongoDb Started`));
 
-app.listen(port,()=>console.log(`Server Started at Port:${port}`));
+app.listen(PORT,()=>console.log(`Server Started at Port:${PORT}`));

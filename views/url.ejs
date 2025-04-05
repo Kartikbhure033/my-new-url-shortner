@@ -1,0 +1,145 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: calc(100% - 20px);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #output {
+            margin-top: 10px;
+            word-wrap: break-word;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>URL Generator</h2>
+        <form action="/url/generateURL" method="post">
+            <input type="text" id="baseUrl" name="url" placeholder="Enter base URL">
+            <button type="submit">Generate URL</button>
+            <% if (locals.id) { %>
+                
+                <p>Your generated short URL: <a href="/url/<%= id %>" target="_blank">http://localhost:8000/url/<%= id %></a></p>
+            <% } %>
+        </form>
+        
+    </div>
+
+   
+
+   
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: calc(100% - 20px);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>URL Generator</h2>
+        <form action="/url/generateURL" method="post">
+            <input type="text" id="baseUrl" name="url" placeholder="Enter base URL">
+            <button type="submit">Generate URL</button>
+        </form>
+
+        <% if (locals.id) { %>
+            <h3>Generated URL</h3>
+            <p><a href="/url/<%= id %>" target="_blank">http://localhost:8000/url/<%= id %></a></p>
+        <% } %>
+        
+       
+
+    </div>
+</body>
+</html>

@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const express=require("express");
+const cors = require('cors');
 const path=require("path");
 const ConnectTOMongoDb=require("mongoose");
 const cookieParser = require('cookie-parser')
@@ -11,6 +12,8 @@ const {CheckAuthenticationforuser,requireAuth}=require("./middlewares/authentica
 
 const app=express();
 const PORT=process.env.PORT ||8000;
+
+app.use(cors());
 
 app.set("view engine","ejs");
 app.set("views",path.resolve("views"));

@@ -1,0 +1,36 @@
+@media (max-width: 768px) {
+    .container {
+        width: 90% !important;
+        padding: 15px !important;
+    }
+
+    .btn {
+        width: 100% !important;
+        padding: 12px !important;
+        font-size: 15px !important;
+    }
+
+    .button-group {
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100%;
+    }
+
+    input, .input-box {
+        width: 100% !important;
+    }
+
+    table {
+        font-size: 12px;
+        overflow-x: auto;
+        display: block;
+    }
+
+    th, td {
+        padding: 8px !important;
+    }
+
+    h1, h2 {
+        font-size: 22px !important;
+    }
+}

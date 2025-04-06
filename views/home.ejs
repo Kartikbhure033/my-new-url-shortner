@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL Shortener</title>
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,18 +16,15 @@
             margin: 0;
         }
         .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto;
+}
         .btn {
             display: block;
             width: 200px;
@@ -51,6 +49,28 @@
         a{
             text-decoration: none;
         }
+        @media (max-width: 768px) {
+    .container {
+        width: 90% !important;
+        padding: 20px !important;
+    }
+
+    .btn {
+        width: 100% !important;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
     </style>
 </head>
 <body>
